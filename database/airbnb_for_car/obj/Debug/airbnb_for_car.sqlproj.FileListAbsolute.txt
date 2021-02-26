@@ -1,0 +1,5 @@
+D:\airbnb_for_car\database\airbnb_for_car\bin\Debug\airbnb_for_car.dacpac
+D:\airbnb_for_car\database\airbnb_for_car\bin\Debug\airbnb_for_car.dll
+D:\airbnb_for_car\database\airbnb_for_car\bin\Debug\airbnb_for_car.pdb
+D:\airbnb_for_car\database\airbnb_for_car\obj\Debug\airbnb_for_car.dll
+D:\airbnb_for_car\database\airbnb_for_car\obj\Debug\airbnb_for_car.pdb

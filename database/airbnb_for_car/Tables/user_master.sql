@@ -1,0 +1,17 @@
+﻿CREATE TABLE [dbo].[user_master]
+(
+	[id] INT NOT NULL IDENTITY(0,1),
+	[name] NVARCHAR(200) NOT NULL,
+	photo_url NVARCHAR(1000) NULL,
+	sex NVARCHAR(50) NOT NULL,
+	dob NVARCHAR(12) NOT NULL,
+	about NVARCHAR(1000) NULL,
+	primary_phone NVARCHAR(30) NULL,
+	secondray_phone NVARCHAR(30) NULL,
+	fax NVARCHAR(30) NULL,
+	created_datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updated_datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	created_by NVARCHAR(200) NOT NULL,
+	updated_by NVARCHAR(200) NOT NULL,
+	CONSTRAINT pk_user_master_id PRIMARY KEY(id)
+ )

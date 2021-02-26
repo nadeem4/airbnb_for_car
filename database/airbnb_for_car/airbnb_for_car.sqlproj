@@ -56,5 +56,18 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Tables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\user_master.sql" />
+    <Build Include="Tables\user_address.sql" />
+    <Build Include="Tables\vehcile_master.sql" />
+    <Build Include="Tables\vehcile_image.sql" />
+    <Build Include="Tables\vehcile_service_history.sql" />
+    <Build Include="Tables\vehcile_owner.sql" />
+    <Build Include="Tables\vehcile_rent_history.sql" />
+    <Build Include="Tables\vehcile_rent_comments.sql" />
+    <Build Include="Tables\vehcile_rent_feedback.sql" />
+    <Build Include="Tables\address_master.sql" />
   </ItemGroup>
 </Project>
