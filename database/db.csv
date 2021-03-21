@@ -1,0 +1,147 @@
+﻿sqlserver,airbnb_for_car,dbo,unit_master,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,unit_master,name,2,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,unit_master,desc,3,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,unit_master,created_datetime,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,unit_master,updated_datetime,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,unit_master,created_by,6,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,unit_master,updated_by,7,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_app_access_history,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_app_access_history,user_id,2,int,NULL,FOREIGN KEY,dbo,user_master,id
+sqlserver,airbnb_for_car,dbo,user_app_access_history,latitude,3,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_app_access_history,longitude,4,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_app_access_history,logged_in_time,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_app_access_history,logged_out_time,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_app_access_history,created_datetime,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_app_access_history,updated_datetime,8,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_app_access_history,created_by,9,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_app_access_history,updated_by,10,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_social_accounts,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_social_accounts,user_id,2,int,NULL,FOREIGN KEY,dbo,user_master,id
+sqlserver,airbnb_for_car,dbo,user_social_accounts,social_account,3,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_social_accounts,created_datetime,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_social_accounts,updated_datetime,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_social_accounts,created_by,6,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_social_accounts,updated_by,7,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_social_accounts,is_active,8,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,vehcile_id,2,int,NULL,FOREIGN KEY,dbo,vehcile_master,id
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,renter_id,3,int,NULL,FOREIGN KEY,dbo,user_master,id
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,rent_time,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,picked_from,5,int,NULL,FOREIGN KEY,dbo,address_master,id
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,dropping_location,6,int,NULL,FOREIGN KEY,dbo,address_master,id
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,rent_duration,7,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,discount,8,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,expected_mileage,9,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,price_per_mile,10,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,rent_duration_unit,11,nvarchar,10,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,actual_price,12,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,negotiated_price,13,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,contract_url,14,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,addtitonal_comment,15,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,is_open,16,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehicle_rent_contract,expected_mileage_used,17,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,address_line_one,2,nvarchar,2000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,address_line_two,3,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,city,4,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,state,5,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,country,6,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,zipcode,7,nvarchar,20,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,created_datetime,8,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,updated_datetime,9,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,created_by,10,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,address_master,updated_by,11,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_address,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_address,user_id,2,int,NULL,FOREIGN KEY,dbo,user_master,id
+sqlserver,airbnb_for_car,dbo,user_address,address_id,3,int,NULL,FOREIGN KEY,dbo,address_master,id
+sqlserver,airbnb_for_car,dbo,user_address,is_active,4,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_image,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_image,url,2,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_image,desc,3,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_image,vehcile_id,4,int,NULL,FOREIGN KEY,dbo,vehcile_master,id
+sqlserver,airbnb_for_car,dbo,vehcile_image,created_datetime,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_image,updated_datetime,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_image,created_by,7,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_image,updated_by,8,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_owner,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_owner,owner_id,2,int,NULL,FOREIGN KEY,dbo,user_master,id
+sqlserver,airbnb_for_car,dbo,vehcile_owner,vehcile_id,3,int,NULL,FOREIGN KEY,dbo,vehcile_master,id
+sqlserver,airbnb_for_car,dbo,vehcile_owner,created_datetime,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_owner,updated_datetime,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_owner,created_by,6,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_owner,updated_by,7,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_comments,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_comments,vehcile_rent_id,2,int,NULL,FOREIGN KEY,dbo,vehcile_rent_history,id
+sqlserver,airbnb_for_car,dbo,vehcile_rent_comments,comment,3,nvarchar,-1,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_comments,created_datetime,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_comments,updated_datetime,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_comments,created_by,6,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_comments,updated_by,7,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_feedback,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_feedback,vehcile_rent_id,2,int,NULL,FOREIGN KEY,dbo,vehcile_rent_history,id
+sqlserver,airbnb_for_car,dbo,vehcile_rent_feedback,feedback,3,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_feedback,given_by,4,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_feedback,rating,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_feedback,created_datetime,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_feedback,updated_datetime,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_feedback,created_by,8,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_feedback,updated_by,9,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,vehcile_id,2,int,NULL,FOREIGN KEY,dbo,vehcile_master,id
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,serviced_by,3,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,serviced_on,4,nvarchar,15,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,issue,5,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,mileage,6,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,created_datetime,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,updated_datetime,8,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,created_by,9,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_service_history,updated_by,10,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,sysdiagrams,name,1,nvarchar,128,UNIQUE,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,sysdiagrams,principal_id,2,int,NULL,UNIQUE,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,sysdiagrams,diagram_id,3,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,sysdiagrams,version,4,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,sysdiagrams,definition,5,varbinary,-1,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,name,2,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,nickname,3,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,photo_url,4,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,sex,5,nvarchar,50,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,dob,6,nvarchar,12,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,about,7,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,primary_phone,8,nvarchar,30,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,secondray_phone,9,nvarchar,30,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,created_datetime,10,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,updated_datetime,11,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,created_by,12,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,updated_by,13,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,user_master,is_active,14,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,type,2,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,main_image_url,3,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,model,4,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,make,5,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,price_per_mile,6,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,vin,7,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,purchased_year,8,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,mileage,9,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,insured_by,10,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,drivetrain,11,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,fuel_capacity,12,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,fuel_type,13,nvarchar,100,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,seating_capacity,14,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,additional_detail,15,nvarchar,1000,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,ratings,16,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,created_datetime,17,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,updated_datetime,18,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,created_by,19,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,updated_by,20,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_master,is_active,21,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_history,id,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_history,contract_id,2,int,NULL,FOREIGN KEY,dbo,vehicle_rent_contract,id
+sqlserver,airbnb_for_car,dbo,vehcile_rent_history,dropped_at,3,int,NULL,FOREIGN KEY,dbo,address_master,id
+sqlserver,airbnb_for_car,dbo,vehcile_rent_history,actual_mileage_used,4,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_history,actual_price_paid,5,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_history,created_datetime,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_history,updated_datetime,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_history,created_by,8,nvarchar,200,NULL,NULL,NULL,NULL
+sqlserver,airbnb_for_car,dbo,vehcile_rent_history,updated_by,9,nvarchar,200,NULL,NULL,NULL,NULL

@@ -9,6 +9,6 @@
 	created_by NVARCHAR(200) NOT NULL,
 	updated_by NVARCHAR(200) NOT NULL,
 	CONSTRAINT pk_vehcile_image_id PRIMARY KEY(id),
-	CONSTRAINT fk_vehcile_image_vehcile_id_vehcile_master_id FOREIGN KEY(id) REFERENCES vehcile_master(id)
+	CONSTRAINT fk_vehcile_image_vehcile_id_vehcile_master_id FOREIGN KEY(vehcile_id) REFERENCES vehcile_master(id)
 
 )

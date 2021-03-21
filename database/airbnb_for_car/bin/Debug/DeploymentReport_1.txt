@@ -1,0 +1,135 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[user_master]
+       [dbo].[vehcile_master]
+       [dbo].[vehcile_rent_history]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[user_master].[fax] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_master].[drivetraint] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_master].[price_per_mile] on table [dbo].[vehcile_master] must be added, but the column has no
+         default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this
+         issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of
+         smart-defaults as a deployment option.
+       The column [dbo].[vehcile_rent_history].[addtitonal_comment] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_rent_history].[mileage_used] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_rent_history].[picked_from] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_rent_history].[price_per_hrs] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_rent_history].[rent_on] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_rent_history].[rented_for] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_rent_history].[rented_for_unit] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_rent_history].[renter_id] is being dropped, data loss could occur.
+       The column [dbo].[vehcile_rent_history].[vehcile_id] is being dropped, data loss could occur.
+       The type for column contract_id in table [dbo].[vehcile_rent_history] is currently  NVARCHAR (1000) NULL but is being
+         changed to  INT NOT NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible
+         with type  INT NOT NULL.
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[user_master] (Default Constraint)
+       unnamed constraint on [dbo].[user_master] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_master] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_master] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_master] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_rent_history] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_rent_history] (Default Constraint)
+       unnamed constraint on [dbo].[address_master] (Default Constraint)
+       unnamed constraint on [dbo].[address_master] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_image] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_image] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_owner] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_owner] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_rent_comments] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_rent_comments] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_rent_feedback] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_rent_feedback] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_service_history] (Default Constraint)
+       unnamed constraint on [dbo].[vehcile_service_history] (Default Constraint)
+       [dbo].[fk_vehcile_rent_history_renter_id_user_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_history_vehcile_id_vehcile_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_history_picked_from_address_master_id] (Foreign Key)
+     Table rebuild
+       [dbo].[user_master] (Table)
+       [dbo].[vehcile_master] (Table)
+       [dbo].[vehcile_rent_history] (Table)
+     Create
+       [dbo].[unit_master] (Table)
+       [dbo].[user_app_access_history] (Table)
+       [dbo].[user_social_accounts] (Table)
+       [dbo].[vehicle_rent_contract] (Table)
+       Default Constraint: unnamed constraint on [dbo].[unit_master] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[unit_master] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[unit_master] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[unit_master] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_app_access_history] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_app_access_history] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_app_access_history] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_app_access_history] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_app_access_history] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_social_accounts] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_social_accounts] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_social_accounts] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_social_accounts] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[user_social_accounts] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehicle_rent_contract] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehicle_rent_contract] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[address_master] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[address_master] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_image] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_image] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_owner] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_owner] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_rent_comments] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_rent_comments] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_rent_feedback] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_rent_feedback] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_service_history] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[vehcile_service_history] (Default Constraint)
+       [dbo].[fk_vehicle_rent_history_contract_id_vehicle_contract_id] (Foreign Key)
+       [dbo].[fk_user_app_access_history_user_id_user_master_id] (Foreign Key)
+       [dbo].[fk_user_social_account_user_id_user_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_contract_vehcile_id_vehcile_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_contract_renter_id_user_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_contract_picked_from_address_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_contract_dropping_location_address_master_id] (Foreign Key)
+       [dbo].[check_social_account_values] (Check Constraint)
+       [dbo].[add_vehicle] (Procedure)
+
+** Supporting actions
+     Drop
+       [dbo].[fk_user_address_user_id_user_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_owner_owner_id_user_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_image_vehcile_id_vehcile_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_owner_vehcile_id_vehcile_master] (Foreign Key)
+       [dbo].[fk_vehcile_service_history_vehcile_id_vehcile_master] (Foreign Key)
+       [dbo].[fk_vehcile_rent_comment_vehcile_rent_id_vehcile_rent_history_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_feedback_vehcile_rent_id_vehcile_rent_history_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_history_dropped_at_address_master_id] (Foreign Key)
+     Create
+       [dbo].[fk_user_address_user_id_user_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_owner_owner_id_user_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_image_vehcile_id_vehcile_master_id] (Foreign Key)
+       [dbo].[fk_vehcile_owner_vehcile_id_vehcile_master] (Foreign Key)
+       [dbo].[fk_vehcile_service_history_vehcile_id_vehcile_master] (Foreign Key)
+       [dbo].[fk_vehcile_rent_comment_vehcile_rent_id_vehcile_rent_history_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_feedback_vehcile_rent_id_vehcile_rent_history_id] (Foreign Key)
+       [dbo].[fk_vehcile_rent_history_dropped_at_address_master_id] (Foreign Key)
+
+The column [dbo].[user_master].[fax] is being dropped, data loss could occur.
+The column [dbo].[vehcile_master].[drivetraint] is being dropped, data loss could occur.
+The column [dbo].[vehcile_master].[price_per_mile] on table [dbo].[vehcile_master] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[vehcile_rent_history].[addtitonal_comment] is being dropped, data loss could occur.
+The column [dbo].[vehcile_rent_history].[mileage_used] is being dropped, data loss could occur.
+The column [dbo].[vehcile_rent_history].[picked_from] is being dropped, data loss could occur.
+The column [dbo].[vehcile_rent_history].[price_per_hrs] is being dropped, data loss could occur.
+The column [dbo].[vehcile_rent_history].[rent_on] is being dropped, data loss could occur.
+The column [dbo].[vehcile_rent_history].[rented_for] is being dropped, data loss could occur.
+The column [dbo].[vehcile_rent_history].[rented_for_unit] is being dropped, data loss could occur.
+The column [dbo].[vehcile_rent_history].[renter_id] is being dropped, data loss could occur.
+The column [dbo].[vehcile_rent_history].[vehcile_id] is being dropped, data loss could occur.
+The column contract_id on table [dbo].[vehcile_rent_history] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The type for column contract_id in table [dbo].[vehcile_rent_history] is currently  NVARCHAR (1000) NULL but is being changed to  INT NOT NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  INT NOT NULL.
+

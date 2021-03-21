@@ -5,11 +5,12 @@
 	main_image_url NVARCHAR(1000) NOT NULL,
 	model NVARCHAR(200) NOT NULL,
 	make NVARCHAR(200) NOT NULL,
+	price_per_mile DECIMAL(10, 2) NOT NULL,
 	vin NVARCHAR(200) NOT NULL,
 	purchased_year INT NOT NULL,
 	mileage INT NOT NULL,
 	insured_by NVARCHAR(1000) NOT NULL,
-	drivetraint NVARCHAR(200) NULL,
+	drivetrain NVARCHAR(200) NULL, 
 	fuel_capacity DECIMAL(6,2) NOT NULL,
 	fuel_type NVARCHAR(100) NOT NULL,
 	seating_capacity INT NOT NULL,
@@ -19,5 +20,6 @@
 	updated_datetime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	created_by NVARCHAR(200) NOT NULL,
 	updated_by NVARCHAR(200) NOT NULL,
+	is_active BIT NOT NULL DEFAULT 1,
 	CONSTRAINT pk_vehcile_master_id PRIMARY KEY(id)
 )

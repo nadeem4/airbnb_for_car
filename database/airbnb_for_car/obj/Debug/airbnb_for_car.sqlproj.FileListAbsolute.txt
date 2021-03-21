@@ -3,3 +3,8 @@ D:\airbnb_for_car\database\airbnb_for_car\bin\Debug\airbnb_for_car.dll
 D:\airbnb_for_car\database\airbnb_for_car\bin\Debug\airbnb_for_car.pdb
 D:\airbnb_for_car\database\airbnb_for_car\obj\Debug\airbnb_for_car.dll
 D:\airbnb_for_car\database\airbnb_for_car\obj\Debug\airbnb_for_car.pdb
+D:\airbnb_for_car\database\airbnb_for_car\obj\Debug\airbnb_for_car.sqlprojAssemblyReference.cache
+D:\airbnb_for_car\database\airbnb_for_car\obj\Debug\Model.xml
+D:\airbnb_for_car\database\airbnb_for_car\obj\Debug\refactor.xml
+D:\airbnb_for_car\database\airbnb_for_car\obj\Debug\postdeploy.sql
+D:\airbnb_for_car\database\airbnb_for_car\obj\Debug\predeploy.sql
