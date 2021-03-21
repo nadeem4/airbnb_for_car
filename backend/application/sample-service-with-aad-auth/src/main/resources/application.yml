@@ -1,0 +1,71 @@
+spring:
+  application:
+    name: sample-service-with-aad-auth
+  profiles.active: dev
+
+  security.oauth2.client.registration.azure:
+    client-id: c29fa5aa-6518-45ce-ad32-52fbc4b18abf
+    client-secret: <client secret of server app>
+    client-name: Azure
+
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 30000
+      minimum-idle: 1
+      maximum-pool-size: 10
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      auto-commit: true
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      jdbc-url: jdbc:sqlserver://localhost:1435;DatabaseName=practice
+      username: <your user name>
+      password: <your pass>
+      leak-detection-threshold: 60000
+
+
+
+
+
+azure:
+  activedirectory:
+    client-id: c29fa5aa-6518-45ce-ad32-52fbc4b18abf
+    allow-telemetry: true
+    client-secret: <client secret of server app>
+    user-group.allowed-groups: spring_boot_demo
+    tenant-id: <tenant id>
+
+server:
+  port: 8080
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        secure: true
+
+app:
+  version: 1.0.0
+  security:
+    enabled: true
+
+  swagger:
+    enable-auth: true
+    oauth:
+      client-id: 05a5d9a5-f2c3-4f4b-9ea6-5f35adc0b902
+      client-key: <client secret of client app>
+      resource: api://c29fa5aa-6518-45ce-ad32-52fbc4b18abf
+      login-endpoint: https://login.microsoftonline.com/<tenant id>/oauth2/authorize
+    title: Sample Service With AAD Enabled
+    desc: Helps to interact with Backend
+    version: v1
+    path-mapping: /
+    contact:
+      name: Backend Team
+      email: test@test.com
+      url: ""
+    license: null
+    license-uri: null
+
+
+
+

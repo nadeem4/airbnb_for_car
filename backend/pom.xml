@@ -13,9 +13,8 @@
 		<module>lib/notification</module>
 		<module>lib/file-handler</module>
         <module>application/sample-service</module>
-        <module>application/vehicle-service</module>
-		<module>application/user-service</module>
-	</modules>
+        <module>application/sample-service-with-aad-auth</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
