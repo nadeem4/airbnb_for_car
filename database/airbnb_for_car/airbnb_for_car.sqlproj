@@ -74,5 +74,8 @@
     <Build Include="Tables\unit_master.sql" />
     <Build Include="Tables\vehicle_rent_contract.sql" />
     <Build Include="Tables\user_social_accounts.sql" />
+    <Build Include="Stored Procedure\create_vehicle_rent_contract.sql" />
+    <Build Include="Stored Procedure\close_contract.sql" />
+    <Build Include="Stored Procedure\add_comments_to_contract.sql" />
   </ItemGroup>
 </Project>

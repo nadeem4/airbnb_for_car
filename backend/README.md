@@ -158,7 +158,7 @@ app:
 - __Step 6:__ *Create Application.java class under root package*
 
 ```JAVA
-package sample_service;
+package vehicle_service;
 
 import apidocs.annotations.EnableDocs;
 import org.springframework.boot.SpringApplication;
@@ -214,7 +214,7 @@ app:
 Enable swagger by only adding **@EnableDocs** annotation on Main Class.
 
 ```JAVA
-package sample_service;
+package vehicle_service;
 
 import apidocs.annotations.EnableDocs;
 import org.springframework.boot.SpringApplication;
@@ -396,7 +396,7 @@ __*Custom Exception*__
 Out of the box logging for Repository, Service, Controller and Components, once below dependency added to pom.xml, and for all other functions of classes use **@Loggable** annotation.
 
 ```JAVA
-package sample_service.dto.mapper;
+package vehicle_service.dto.mapper;
 
 import logging.annotations.Loggable;
 import sample_service.dto.model.AppModelDTO;
@@ -418,7 +418,7 @@ public class AppModelMapper {
 **@Loggable** has 4 optional parameters, that can set, if want to log some different messages.
 
 ```JAVA
-package sample_service.dto.mapper;
+package vehicle_service.dto.mapper;
 
 import logging.annotations.Loggable;
 import sample_service.dto.model.AppModelDTO;
@@ -516,7 +516,7 @@ spring:
       - org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration
 ```
 ```JAVA
-package sample_service;
+package vehicle_service;
 
 import apidocs.annotations.EnableDocs;
 import org.springframework.boot.SpringApplication;
@@ -546,7 +546,7 @@ It has few important component:
 
 - __ValidList:__ Use this when you are adding any validators to an element of List.
 ```JAVA
-package sample_service.controller.v1.api;
+package vehicle_service.controller.v1.api;
 
 import utility.annotations.ControllerV1;
 
@@ -571,7 +571,7 @@ public class AppController {
     - detailMessage: List
 
 ```JAVA
-package sample_service.controller.v1.api;
+package vehicle_service.controller.v1.api;
 
 import utility.annotations.ControllerV1;
 

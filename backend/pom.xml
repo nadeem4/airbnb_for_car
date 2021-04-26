@@ -12,9 +12,9 @@
 		<module>lib/utility</module>
 		<module>lib/notification</module>
 		<module>lib/file-handler</module>
-        <module>application/sample-service</module>
-        <module>application/sample-service-with-aad-auth</module>
-    </modules>
+        <module>application/vehicle-service</module>
+		<module>application/user-service</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -24,8 +24,8 @@
 	<groupId>com.app</groupId>
 	<artifactId>backend-parent</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>Spring boot Multi Module Project</name>
-	<description>Spring Boot Multi Module Project</description>
+	<name>Airbnb for Vehicle</name>
+	<description>Airbnb for Vehicle</description>
 
 	<properties>
 		<java.version>11</java.version>

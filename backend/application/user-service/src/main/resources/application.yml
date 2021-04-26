@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: test
+    password: test
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+      - org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration
+
+
+server:
+  port: 8080
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        secure: true
+
+app:
+  version: 1.0.0
+  security:
+    enabled: true
+  swagger:
+    enable-auth: false
+    title: User Service
+    desc: Helps to interact with Backend
+    version: v1
+    path-mapping: /
+    contact:
+      name: Backend Team
+      email: codewithnk@gmail.com
+      url: ""
+    license: null
+    license-uri: null
